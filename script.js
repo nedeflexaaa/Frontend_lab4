@@ -103,3 +103,17 @@ function goToSlide(index) {
     carouselCounter.textContent = `${carouselIndex + 1} / ${carouselSlides.length}`;
     renderDots();
 }
+
+function startCarousel() {
+    stopCarousel();
+    carouselTimer = window.setInterval(() => {
+        goToSlide(carouselIndex + 1);
+    }, 5000);
+}
+
+function stopCarousel() {
+    if (carouselTimer !== null) {
+        window.clearInterval(carouselTimer);
+        carouselTimer = null;
+    }
+}
