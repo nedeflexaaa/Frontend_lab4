@@ -765,3 +765,72 @@ textarea:focus {
 .contact-card p {
     margin-bottom: 6px;
 }
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: auto;
+    background-color: rgba(16, 42, 69, 0.68);
+}
+
+.modal-card {
+    position: relative;
+    width: min(520px, 100%);
+    padding: 30px 30px 26px;
+    border-top: 5px solid var(--orange);
+    background-color: #ffffff;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background-color: transparent;
+    color: var(--navy);
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: var(--orange);
+}
+
+.riddle-text {
+    padding: 14px 16px;
+    border-left: 4px solid var(--orange);
+    background-color: #f3f6f8;
+    color: #334155;
+}
+
+#riddleForm {
+    margin-top: 16px;
+}
+
+#riddleForm input {
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+
+.riddle-feedback {
+    min-height: 24px;
+    margin: 12px 0 0;
+    font-weight: 600;
+}
+
+.riddle-feedback.is-success {
+    color: var(--success);
+}
+
+.riddle-feedback.is-error {
+    color: var(--danger);
+}
