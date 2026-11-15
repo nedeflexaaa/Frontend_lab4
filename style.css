@@ -855,3 +855,88 @@ textarea:focus {
 .footer-inner p {
     margin: 0;
 }
+
+body.night-mode {
+    color: #f3f4f6;
+}
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode .brand-text,
+body.night-mode .intro-brand {
+    color: #ffffff;
+}
+
+body.night-mode .brand-text small,
+body.night-mode .section-lead,
+body.night-mode .muted-note,
+body.night-mode .hero-text,
+body.night-mode .page-intro > p:last-child,
+body.night-mode .founder-figure figcaption,
+body.night-mode .carousel-note,
+body.night-mode .night-status,
+body.night-mode .carousel-counter,
+body.night-mode .feature-list,
+body.night-mode .choice-fieldset legend,
+body.night-mode .consent,
+body.night-mode .form-grid label,
+body.night-mode .detail-field label {
+    color: #d6d9de;
+}
+
+body.night-mode .site-nav a {
+    color: #f3f4f6;
+}
+
+body.night-mode .site-nav a:hover,
+body.night-mode .site-nav a[aria-current="page"] {
+    color: #fdba74;
+}
+
+body.night-mode .btn-ghost {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.night-mode .btn-ghost:hover {
+    background-color: #ffffff;
+    color: var(--navy-dark);
+}
+
+body.night-mode .detail-tooltip {
+    background-color: #0b1b2b;
+}
+
+body.night-mode .modal-card {
+    color: #f3f4f6;
+}
+
+body.night-mode .modal-card h2,
+body.night-mode .modal-card .section-kicker,
+body.night-mode .modal-close {
+    color: #ffffff;
+}
+
+body.night-mode .riddle-text {
+    color: #e5e7eb;
+}
+
+body.night-mode #riddleForm label {
+    color: #d6d9de;
+}
+
+body.night-mode input,
+body.night-mode textarea,
+body.night-mode select {
+    color: #f3f4f6;
+}
+
+body.night-mode input::placeholder,
+body.night-mode textarea::placeholder {
+    color: #cbd5e1;
+}
+
+body.night-mode .choice {
+    color: #d6d9de;
+}
