@@ -457,3 +457,130 @@ code {
     height: 64px;
     border: 1px solid var(--line);
 }
+
+.carousel {
+    width: min(980px, 100%);
+    margin: 0 auto;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background-color: var(--navy-dark);
+    box-shadow: 0 10px 26px rgba(22, 58, 95, 0.12);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s ease;
+}
+
+.carousel-slide {
+    position: relative;
+    flex: 0 0 100%;
+    height: min(20vw, 260px);
+    overflow: hidden;
+    background-color: var(--navy-dark);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.slide-caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    padding: 18px 22px;
+    background: linear-gradient(90deg, rgba(16, 42, 69, 0.92), rgba(16, 42, 69, 0.18));
+    color: #ffffff;
+}
+
+.slide-number {
+    color: #fdba74;
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.slide-caption h3 {
+    margin-bottom: 2px;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.slide-caption p {
+    margin: 0;
+    color: #e8eef4;
+    font-size: 0.84rem;
+}
+
+.carousel-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.carousel-button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--navy);
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: var(--navy);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.carousel-button:hover {
+    background-color: var(--navy);
+    color: #ffffff;
+}
+
+.carousel-dots {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 1px solid var(--navy);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.carousel-dot.is-active {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.carousel-counter {
+    min-width: 52px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.carousel-note {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+    text-align: center;
+}
