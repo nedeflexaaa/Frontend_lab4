@@ -236,4 +236,25 @@
             <p>Василець Олександр Миколайович · ІПЗ-33(8) · підгрупа 8</p>
         </div>
     </footer>
+
+    <div class="modal-overlay" id="riddleModal" role="dialog" aria-modal="true" aria-labelledby="riddleTitle" hidden>
+        <div class="modal-card">
+            <button class="modal-close" type="button" onclick="closeRiddle()" aria-label="Закрити загадку">×</button>
+            <p class="section-kicker">Загадка від засновника</p>
+            <h2 id="riddleTitle">Хто оживляє сторінку?</h2>
+            <p class="riddle-text">
+                Я не маю крил, але реагую на кожен клік. Я живу в браузері,
+                оживляю кнопки, форми та каруселі. Хто я?
+            </p>
+            <form id="riddleForm">
+                <label for="riddleAnswer">Ваша відповідь</label>
+                <input id="riddleAnswer" name="riddleAnswer" type="text" autocomplete="off" placeholder="Напишіть відповідь" required>
+                <div class="button-row">
+                    <button class="btn btn-primary" type="submit">Перевірити</button>
+                    <button class="btn btn-ghost" type="button" onclick="closeRiddle()">Закрити</button>
+                </div>
+                <p class="riddle-feedback" id="riddleFeedback" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
 </body>
