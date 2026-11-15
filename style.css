@@ -834,3 +834,24 @@ textarea:focus {
 .riddle-feedback.is-error {
     color: var(--danger);
 }
+
+.site-footer {
+    padding: 20px 0;
+    background-color: var(--navy-dark);
+    color: #d8dde3;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: min(1080px, calc(100% - 40px));
+    margin-inline: auto;
+    font-size: 0.82rem;
+}
+
+.footer-inner p {
+    margin: 0;
+}
