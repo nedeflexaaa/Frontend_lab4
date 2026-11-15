@@ -199,7 +199,33 @@
                             <label class="choice"><input type="radio" name="requestType" value="ідея"> Ідея</label>
                         </div>
                     </fieldset>
+                <div class="detail-field" id="detailField">
+                        <label for="details">Детально</label>
+                        <textarea id="details" name="details" rows="7" maxlength="500" placeholder="Опишіть ваше питання (до 500 символів)..." aria-describedby="detailTooltip" required></textarea>
+                        <div class="detail-tooltip" id="detailTooltip" role="tooltip">
+                            Вдячні за Ваш час! Конкретизуйте мету звернення, будь ласка.
+                        </div>
+                    </div>
+
+                    <label class="consent" for="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span>Я даю згоду на обробку персональних даних.</span>
+                    </label>
+
+                    <div class="button-row form-actions">
+                        <button class="btn btn-primary" type="submit">Відправити</button>
+                        <button class="btn btn-ghost" type="reset">Очистити</button>
+                    </div>
+                    <p class="form-message" id="feedbackMessage" role="status" aria-live="polite"></p>
                 </form>
+
+                <aside class="panel contact-card" aria-label="Контакти підтримки">
+                    <p class="section-kicker">Контакти</p>
+                    <h3>Швидкий канал</h3>
+                    <p>hello@futuretech.ua</p>
+                    <p>+380 (44) 123-45-67</p>
+                    <p class="muted-note">Для термінових звернень додайте «URGENT» на початку повідомлення.</p>
+                </aside>
             </div>
         </section>
     </main>
