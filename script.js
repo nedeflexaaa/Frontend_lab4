@@ -54,3 +54,19 @@ function showPage(pageName) {
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+for (const link of pageLinks) {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const pageName = link.dataset.pageLink;
+        if (window.location.hash === `#${pageName}`) {
+            showPage(pageName);
+            return;
+        }
+        window.location.hash = pageName;
+    });
+}
+
+window.addEventListener("hashchange", () => {
+    showPage(pageFromHash());
+});
