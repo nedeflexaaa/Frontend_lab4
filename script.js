@@ -182,3 +182,19 @@ document.addEventListener("keydown", (event) => {
         closeRiddle();
     }
 });
+
+const feedbackForm = document.getElementById("feedbackForm");
+const detailField = document.getElementById("detailField");
+
+function showDetailHint() {
+    detailField.classList.add("is-active");
+}
+
+function hideDetailHint() {
+    detailField.classList.remove("is-active");
+}
+
+detailField.addEventListener("mouseenter", showDetailHint);
+detailField.addEventListener("mouseleave", hideDetailHint);
+detailField.addEventListener("focusin", showDetailHint);
+detailField.addEventListener("focusout", hideDetailHint);
