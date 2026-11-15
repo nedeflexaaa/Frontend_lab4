@@ -117,3 +117,11 @@ function stopCarousel() {
         carouselTimer = null;
     }
 }
+
+document.getElementById("prevSlide").addEventListener("click", () => {
+    goToSlide(carouselIndex - 1);
+});
+
+document.getElementById("nextSlide").addEventListener("click", () => {
+    goToSlide(carouselIndex + 1);
+});
