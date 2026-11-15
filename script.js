@@ -96,3 +96,10 @@ function renderDots() {
         carouselDots.appendChild(dot);
     }
 }
+
+function goToSlide(index) {
+    carouselIndex = (index + carouselSlides.length) % carouselSlides.length;
+    carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
+    carouselCounter.textContent = `${carouselIndex + 1} / ${carouselSlides.length}`;
+    renderDots();
+}
