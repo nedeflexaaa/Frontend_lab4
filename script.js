@@ -150,3 +150,23 @@ function closeRiddle() {
     riddleFeedback.textContent = "";
     riddleFeedback.className = "riddle-feedback";
 }
+
+function normalizeAnswer(value) {
+    return value.toLowerCase().replace(/[^a-zа-яіїєґ0-9]/gi, "");
+}
+
+founderImage.onmouseenter = openRiddle;
+founderImage.onfocus = openRiddle;
+
+riddleForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const answer = normalizeAnswer(riddleAnswer.value);
+    if (["javascript", "js", "джаваскрипт"].includes(answer)) {
+        riddleFeedback.textContent = "Правильно! JavaScript оживляє сторінку.";
+        riddleFeedback.className = "riddle-feedback is-success";
+        window.setTimeout(closeRiddle, 1200);
+        return;
+    }
+    riddleFeedback.textContent = "Ще не те. Підказка: це мова, яка працює в браузері.";
+    riddleFeedback.className = "riddle-feedback is-error";
+});
