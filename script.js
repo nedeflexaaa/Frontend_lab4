@@ -279,3 +279,15 @@ function applyNightMode() {
     nightStatus.textContent = night ? "Зараз: нічний режим (21:00–06:00)" : "Зараз: денний режим";
     nightPreviewButton.textContent = night ? "Показати денний вигляд" : "Перевірити нічний режим";
 }
+
+nightPreviewButton.addEventListener("click", () => {
+    const current = nightPreview === null ? isNightTime() : nightPreview;
+    nightPreview = !current;
+    applyNightMode();
+});
+
+window.setInterval(() => {
+    if (nightPreview === null) {
+        applyNightMode();
+    }
+}, 60000);
