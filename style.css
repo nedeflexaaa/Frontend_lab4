@@ -584,3 +584,91 @@ code {
     font-size: 0.84rem;
     text-align: center;
 }
+
+.feedback-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+    align-items: start;
+}
+
+.feedback-form {
+    padding: 24px 26px;
+    border: 1px solid var(--line);
+    background-color: var(--surface);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.form-grid label,
+.detail-field label,
+#riddleForm label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    background-color: #ffffff;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--navy);
+    outline: 2px solid rgba(22, 58, 95, 0.14);
+    outline-offset: 1px;
+}
+
+.choice-fieldset {
+    margin: 16px 0;
+    padding: 0;
+    border: 0;
+}
+
+.choice-fieldset legend {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.choice-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+    font-size: 0.88rem;
+    font-weight: 400;
+}
+
+.choice input {
+    width: auto;
+}
