@@ -238,3 +238,32 @@ code {
     color: #4a463e;
     font-size: 1rem;
 }
+
+.motto-line {
+    min-height: 2.4em;
+    margin: 0 0 18px;
+    font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+    line-height: 1.35;
+}
+
+.motto-text {
+    color: #7f1d1d;
+    font-family: var(--font-heading);
+    font-weight: 840;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.05em;
+    margin-left: 3px;
+    vertical-align: -0.12em;
+    background-color: #7f1d1d;
+    animation: cursor-blink 0.8s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+    50% {
+        opacity: 0;
+    }
+}
