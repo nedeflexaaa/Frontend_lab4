@@ -253,3 +253,29 @@ function darkenColor(color) {
     }
     return `rgba(${Math.round(red * 0.6)}, ${Math.round(green * 0.6)}, ${Math.round(blue * 0.6)}, ${alpha})`;
 }
+
+function clearNightStyles() {
+    const darkened = document.querySelectorAll("[data-night-darkened]");
+    for (const element of darkened) {
+        element.style.removeProperty("background-color");
+        element.removeAttribute("data-night-darkened");
+    }
+}
+
+function applyNightMode() {
+    clearNightStyles();
+    const night = nightPreview === null ? isNightTime() : nightPreview;
+    document.body.classList.toggle("night-mode", night);
+    if (night) {
+        const elements = document.querySelectorAll("body, body *");
+        for (const element of elements) {
+            const darker = darkenColor(getComputedStyle(element).backgroundColor);
+            if (darker !== null) {
+                element.style.backgroundColor = darker;
+                element.setAttribute("data-night-darkened", "true");
+            }
+        }
+    }
+    nightStatus.textContent = night ? "Зараз: нічний режим (21:00–06:00)" : "Зараз: денний режим";
+    nightPreviewButton.textContent = night ? "Показати денний вигляд" : "Перевірити нічний режим";
+}
