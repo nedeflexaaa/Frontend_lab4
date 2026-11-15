@@ -280,3 +280,41 @@ code {
     font-size: 0.84rem;
     font-weight: 600;
 }
+
+.panel {
+    margin-bottom: 28px;
+    padding: 28px 32px;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    background-color: var(--surface);
+    box-shadow: none;
+}
+
+.section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.section-head h2 {
+    margin-bottom: 0;
+}
+
+.section-kicker {
+    color: var(--orange-dark);
+}
+
+.section-lead {
+    max-width: 88ch;
+    margin-bottom: 22px;
+    color: var(--muted);
+}
+
+.muted-note {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
