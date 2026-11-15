@@ -70,3 +70,29 @@ for (const link of pageLinks) {
 window.addEventListener("hashchange", () => {
     showPage(pageFromHash());
 });
+
+const carouselTrack = document.getElementById("carouselTrack");
+const carouselDots = document.getElementById("carouselDots");
+const carouselCounter = document.getElementById("carouselCounter");
+const carouselSlides = document.getElementsByClassName("carousel-slide");
+let carouselIndex = 0;
+let carouselTimer = null;
+
+function renderDots() {
+    while (carouselDots.firstChild) {
+        carouselDots.removeChild(carouselDots.firstChild);
+    }
+    for (let index = 0; index < carouselSlides.length; index += 1) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", `Слайд ${index + 1}`);
+        if (index === carouselIndex) {
+            dot.classList.add("is-active");
+        }
+        dot.addEventListener("click", () => {
+            goToSlide(index);
+        });
+        carouselDots.appendChild(dot);
+    }
+}
