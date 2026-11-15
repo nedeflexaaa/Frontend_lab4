@@ -291,3 +291,8 @@ window.setInterval(() => {
         applyNightMode();
     }
 }, 60000);
+
+goToSlide(0);
+showPage(pageFromHash());
+applyNightMode();
+startMotto();
