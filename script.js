@@ -198,3 +198,14 @@ detailField.addEventListener("mouseenter", showDetailHint);
 detailField.addEventListener("mouseleave", hideDetailHint);
 detailField.addEventListener("focusin", showDetailHint);
 detailField.addEventListener("focusout", hideDetailHint);
+
+function setFeedbackMessage(text, type) {
+    const oldMessage = document.getElementById("feedbackMessage");
+    const newMessage = document.createElement("p");
+    newMessage.id = "feedbackMessage";
+    newMessage.className = `form-message ${type}`;
+    newMessage.setAttribute("role", "status");
+    newMessage.setAttribute("aria-live", "polite");
+    newMessage.textContent = text;
+    oldMessage.parentNode.replaceChild(newMessage, oldMessage);
+}
