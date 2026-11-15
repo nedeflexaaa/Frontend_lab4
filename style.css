@@ -200,3 +200,41 @@ code {
         transform: translateY(0);
     }
 }
+
+.hero {
+    position: relative;
+    margin-bottom: 28px;
+    padding: 32px 36px;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--orange);
+    border-radius: 0;
+    background-color: #ffffff;
+    color: var(--text);
+    box-shadow: none;
+}
+
+.eyebrow,
+.section-kicker {
+    margin-bottom: 8px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: var(--orange-dark);
+}
+
+.hero h1 {
+    max-width: 820px;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.hero-text {
+    max-width: 78ch;
+    margin-bottom: 22px;
+    color: #4a463e;
+    font-size: 1rem;
+}
