@@ -125,3 +125,28 @@ document.getElementById("prevSlide").addEventListener("click", () => {
 document.getElementById("nextSlide").addEventListener("click", () => {
     goToSlide(carouselIndex + 1);
 });
+
+const founderImage = document.getElementById("founderImage");
+const riddleModal = document.getElementById("riddleModal");
+const riddleForm = document.getElementById("riddleForm");
+const riddleAnswer = document.getElementById("riddleAnswer");
+const riddleFeedback = document.getElementById("riddleFeedback");
+
+function openRiddle() {
+    riddleModal.hidden = false;
+    document.body.classList.add("modal-open");
+    riddleFeedback.textContent = "";
+    riddleFeedback.className = "riddle-feedback";
+    riddleForm.reset();
+    window.setTimeout(() => {
+        riddleAnswer.focus();
+    }, 40);
+}
+
+function closeRiddle() {
+    riddleModal.hidden = true;
+    document.body.classList.remove("modal-open");
+    riddleForm.reset();
+    riddleFeedback.textContent = "";
+    riddleFeedback.className = "riddle-feedback";
+}
