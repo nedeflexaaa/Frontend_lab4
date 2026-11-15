@@ -368,3 +368,60 @@ code {
     background-color: var(--navy);
     color: #ffffff;
 }
+
+.home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.home-grid .panel {
+    margin-bottom: 0;
+}
+
+.feature-list {
+    margin: 0 0 18px;
+    padding-left: 20px;
+    color: #4a463e;
+}
+
+.feature-list li {
+    margin-bottom: 6px;
+}
+
+.founder-card {
+    text-align: center;
+}
+
+.founder-card h2 {
+    font-size: 1.45rem;
+}
+
+.founder-figure {
+    margin: 0 0 16px;
+}
+
+.founder-figure img {
+    width: 100%;
+    max-height: 460px;
+    margin-inline: auto;
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.founder-figure img:hover,
+.founder-figure img:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(22, 58, 95, 0.18);
+    outline: none;
+}
+
+.founder-figure figcaption {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
