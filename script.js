@@ -209,3 +209,22 @@ function setFeedbackMessage(text, type) {
     newMessage.textContent = text;
     oldMessage.parentNode.replaceChild(newMessage, oldMessage);
 }
+
+feedbackForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const requestTypes = document.getElementsByName("requestType");
+    const selectedType = Array.from(requestTypes).find((radio) => radio.checked);
+    if (!selectedType) {
+        setFeedbackMessage("Оберіть тему звернення.", "is-error");
+        return;
+    }
+    const fullName = document.getElementById("fullName").value.trim();
+    feedbackForm.reset();
+    detailField.classList.remove("is-active");
+    setFeedbackMessage(`Дякуємо, ${fullName}! Звернення «${selectedType.value}» прийнято.`, "is-success");
+});
+
+feedbackForm.addEventListener("reset", () => {
+    detailField.classList.remove("is-active");
+    setFeedbackMessage("", "");
+});
