@@ -228,3 +228,28 @@ feedbackForm.addEventListener("reset", () => {
     detailField.classList.remove("is-active");
     setFeedbackMessage("", "");
 });
+
+const nightPreviewButton = document.getElementById("nightPreview");
+const nightStatus = document.getElementById("nightStatus");
+let nightPreview = null;
+
+function isNightTime() {
+    const hour = new Date().getHours();
+    return hour >= 21 || hour < 6;
+}
+
+function darkenColor(color) {
+    const match = color.match(/rgba?\(([^)]+)\)/);
+    if (!match) {
+        return null;
+    }
+    const parts = match[1].split(",").map((part) => part.trim());
+    const red = Number(parts[0]);
+    const green = Number(parts[1]);
+    const blue = Number(parts[2]);
+    const alpha = parts[3] === undefined ? "1" : parts[3];
+    if (Number(alpha) === 0) {
+        return null;
+    }
+    return `rgba(${Math.round(red * 0.6)}, ${Math.round(green * 0.6)}, ${Math.round(blue * 0.6)}, ${alpha})`;
+}
