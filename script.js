@@ -30,3 +30,27 @@ function pageFromHash() {
     const page = window.location.hash.replace("#", "");
     return ["home", "projects", "feedback"].includes(page) ? page : "home";
 }
+
+function showPage(pageName) {
+    const sections = document.getElementsByTagName("section");
+    for (const section of sections) {
+        if (!section.dataset.page) {
+            continue;
+        }
+        section.hidden = section.dataset.page !== pageName;
+    }
+    for (const link of pageLinks) {
+        if (link.dataset.pageLink === pageName) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    }
+    document.body.dataset.currentPage = pageName;
+    if (pageName === "projects") {
+        startCarousel();
+    } else {
+        stopCarousel();
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
