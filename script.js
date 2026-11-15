@@ -170,3 +170,15 @@ riddleForm.addEventListener("submit", (event) => {
     riddleFeedback.textContent = "Ще не те. Підказка: це мова, яка працює в браузері.";
     riddleFeedback.className = "riddle-feedback is-error";
 });
+
+riddleModal.addEventListener("click", (event) => {
+    if (event.target === riddleModal) {
+        closeRiddle();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !riddleModal.hidden) {
+        closeRiddle();
+    }
+});
