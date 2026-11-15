@@ -23,3 +23,10 @@ function startMotto() {
     }
     typeMotto();
 }
+
+const pageLinks = document.querySelectorAll("[data-page-link]");
+
+function pageFromHash() {
+    const page = window.location.hash.replace("#", "");
+    return ["home", "projects", "feedback"].includes(page) ? page : "home";
+}
